@@ -23,11 +23,7 @@
             Console.WriteLine("--- Ordenando Personas por Edad ---");
             List<Person> people = new List<Person>
             {
-                new Person("Alice", 30),
-                new Person("Bob", 25),
-                new Person("Charlie", 35),
-                new Person("David", 25), 
-                new Person("Eve", 28)
+                
             };
 
             Console.WriteLine("Lista original de personas:");
@@ -65,19 +61,6 @@
             {
                 prev = i;
 
-                for (int j = i + 1; j < list.Count; j++)
-                {
-                    actual = j;
-
-                    if (list[prev].CompareTo(list[actual]) > 0)
-                    {
-                        T temporal = list[prev];
-                        list[prev] = list[actual];
-                        list[actual] = temporal;
-                    }
-
-                    prev = actual;
-                }
             }
             return list;
         }
